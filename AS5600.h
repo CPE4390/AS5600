@@ -8,6 +8,7 @@ void AS5600_Init(void);
 float AS5600_GetAngle(void);
 uint8_t AS5600_GetStatus(void);
 uint8_t AS5600_GetAGC(void);
+void AS5600_SetZeroPosition(void);
 
 //Register addresses
 enum {

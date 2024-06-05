@@ -33,3 +33,9 @@ uint8_t AS5600_GetAGC(void) {
     pic18_i2c_read(DEVICE_ADDRESS, AS5600_AGC, &agc, 1);
     return agc;
 }
+
+void AS5600_SetZeroPosition(void) {
+    uint8_t reg[2];
+    pic18_i2c_read(DEVICE_ADDRESS, AS5600_RAW_ANGLE, reg, 2);
+    pic18_i2c_write(DEVICE_ADDRESS, AS5600_ZPOS, reg, 2);
+}
